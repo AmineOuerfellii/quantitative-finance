@@ -141,7 +141,7 @@ def main_example(symbol, period, stack_configs, training_params):
     
     st.write("\n2. Plotting data overview...")
     overview_fig = plot_data_overview(stock_data, symbol)
-    st.plotly_chart(overview_fig, use_container_width=True)
+    st.plotly_chart(overview_fig,key="chart1",use_container_width=True)
     st.write("\n3. Preparing data for forecasting...")
     prices = prepare_stock_data(stock_data, target_column='Close')
     
@@ -185,7 +185,7 @@ def main_example(symbol, period, stack_configs, training_params):
     st.success("Model training completed successfully!")
     st.write("\n7. Plotting training history...")
     train_fig = plot_training_history_plotly(history)
-    st.plotly_chart(train_fig, use_container_width=True)
+    st.plotly_chart(train_fig,key="chart2",use_container_width=True)
 
     st.write("\n8. Evaluating on test data...")
     test_metrics = model.evaluate(
@@ -427,14 +427,14 @@ def main():
                     
                     # Display plots
                     st.subheader("📊 Data Overview")
-                    st.plotly_chart(overview_fig, use_container_width=True)
-                    
+                    st.plotly_chart(overview_fig, key="chart4", use_container_width=True)
+
                     st.subheader("📈 Training History")
-                    st.plotly_chart(train_fig, use_container_width=True)
-                    
+                    st.plotly_chart(train_fig, key="chart5", use_container_width=True)
+
                     st.subheader("🔮 Forecast Results")
-                    st.plotly_chart(forecast_fig, use_container_width=True)
-                    
+                    st.plotly_chart(forecast_fig, key="chart6", use_container_width=True)
+
                     # Display results
                     col1, col2 = st.columns(2)
                     
