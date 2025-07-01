@@ -1,4 +1,6 @@
 streamlit>=1.38.0 
 plotly>=5.24.1 
 yfinance>=0.2.44 
+scikit-learn>=1.0.1
+torch>=1.10.0
 git+https://github.com/AmineOuerfellii/econometron.git
