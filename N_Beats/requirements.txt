@@ -1,0 +1,2 @@
+plotly
+https://github.com/AmineOuerfellii/econometron/blob/main/dist/econometron-0.1.0.tar.gz
